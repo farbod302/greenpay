@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/Footer';
 import GetStart from '../get-start/GetStart';
 import Info from '../info/Info';
 import LandPage from '../land-page/LandPage';
@@ -15,6 +16,7 @@ const MainPage = () => {
             <Info/>
             <GetStart/>
             <Portfolio/>
+            <Footer/>
         </div>
     );
 }

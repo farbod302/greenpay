@@ -1,0 +1,69 @@
+.portfolio{
+    min-height: 80vh;
+    background-color: #0F054C;
+    .main-title{
+        padding: 3rem 0;
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+    }
+    .options{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2rem;
+        .chart-img{
+            display: grid;
+            place-items: center;
+            img{
+                width: 80%;
+            }
+        }
+        .dis{
+            display: grid;
+            color: white;
+            .each-dis{
+                display: grid;
+                align-items: center;
+                grid-template-columns: 5rem 1fr;
+                column-gap: 2rem;
+                .icon{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .txt{
+                    display: grid;
+                    .card-title{
+                        color: #43E8E1;
+                        font-size: 1.5rem;
+                        padding: 1rem 0;
+                    }
+                    .card-dis{
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 800px){
+        .main-title{
+            font-size: 1.5rem;
+            padding: 1rem 0;
+            line-height: 2rem;
+        }
+        .options{
+            grid-template-columns: 1fr;
+            .chart-img{
+                display: none;
+            }
+            .dis{
+                .each-dis{
+                    width: 95%;
+                    margin: auto;
+                    margin-bottom: 2rem;
+                    grid-template-columns: 4rem 1fr;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.land-page{
+    min-height: 80vh;
+    background-image: url("../../public/lp.png");
+    background-size:  100% 100%;
+    display: grid;
+    align-items: center;
+
+    .lp-content-container{
+        height: 30rem;
+        width: 50%;
+        display: grid;
+        align-items: center;
+        color: white;
+        margin-left: 1rem;
+        .main-title{
+            font-size: 3rem;
+            span{
+                color: #43E8E1;
+            }
+        }
+        .sec-title{
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        .pr-title{
+            font-size: 1.3rem;
+            line-height: 4rem;
+            li{
+                display: grid;
+                align-items: center;
+                grid-template-columns: 3rem 1fr;
+                .icon{
+                    display: grid;
+                    align-items: center;
+                    color: #43E8E1;
+                    font-size: 1.7rem;
+                }
+                .dis{
+                    display: grid;
+                    align-items: center;
+                }
+            }
+        }
+        .btn-container{
+
+            text-align: center;
+            width: 30%;
+            margin: auto;
+            .btn{
+                padding: 0.75rem 0;
+                background-color: #43E8E1;
+                color: #251E6C;
+                font-size: 1.2rem;
+                font-weight: 900;
+                border-radius: 0.2rem;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                }
+            }
+        }
+    }
+    @media(max-width:800px){
+        background-image: url("../../public/lp-mobile.jpg");
+        min-height: 90vh;
+        .lp-content-container{
+            width: 90%;
+            margin: auto;
+            min-height: 80vh;
+            text-align: center;
+            .sec-title{
+                font-size: 1.7rem;
+            }
+            .pr-title{
+                font-size: 1rem;
+
+            }
+            .btn-container{
+                width: 60%;
+            }
+        }
+    }
+ 
+}

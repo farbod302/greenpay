@@ -1,0 +1,75 @@
+.info {
+    background-color: #0f054c;
+    min-height: 35rem;
+    display: grid;
+    align-items: center;
+    .info-content {
+        min-height: 22rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+        .card {
+            cursor: pointer;
+            transition: 0.2s;
+            border: 1px solid #43e8e1;
+            border-radius: 0.5rem;
+            box-shadow: rgba(92, 92, 92, 0.35) 0px 5px 15px;
+            .icon {
+                text-align: center;
+                height: 5rem;
+                .img {
+                    width: 8rem;
+                    height: 8rem;
+                    margin: auto;
+                    border: 1px solid #43e8e1;
+                    border-radius: 50%;
+                    background-color: #10064e;
+                    display: grid;
+                    place-items: center;
+                    transform: translate(0, -50%);
+                    img {
+                        width: 80%;
+                        height: 80%;
+                    }
+                }
+            }
+            .dic {
+                .title {
+                    text-align: center;
+                    font-size: 1.8rem;
+                    color: #43e8e1;
+                    margin-bottom: 1rem;
+                }
+                .dic-text {
+                    width: 90%;
+                    margin: auto;
+                    color: white;
+                    line-height: 1.8rem;
+                    font-size: 1.1rem;
+                    text-align: justify;
+                }
+            }
+            &:hover {
+                transform: scale(1.1, 1.1);
+                box-shadow: rgba(175, 175, 175, 0.35) 0px 5px 15px;
+                .icon {
+                    transform: rotateY(360deg);
+                    transition: 0.5s;
+
+                }
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        padding: 5rem 0;
+        .info-content {
+            grid-template-columns: 1fr;
+            row-gap: 7rem;
+            .card {
+                width: 80%;
+                margin: auto;
+                min-height: 20rem;
+            }
+        }
+    }
+}

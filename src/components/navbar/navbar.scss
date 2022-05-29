@@ -1,0 +1,81 @@
+.navbar{
+    background: #0F054C;
+    color: white;
+    overflow: hidden;
+   
+    .nav-container{
+        max-height: 4rem;
+        transition: 0.5s;
+
+        display: grid;
+        grid-template-columns: repeat(3,1fr );
+        div{
+            display: grid;
+            align-items: center;
+        }
+        .logo{
+            display: grid;
+            align-items: center;
+            height: 4rem;
+            grid-template-columns: 2rem 1fr;
+            overflow: hidden;
+            .toggle-nav{
+                display: none;
+                padding: 0.5rem;
+                font-size: 1.2rem;
+            }
+            img{
+                height: 4rem;
+            }
+        }
+        .nav-links{
+            height: 100%;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            cursor: pointer;
+            .active{
+                color: #43E8E1;
+            }
+        }
+        .connect-to-wallet{
+            direction: rtl;
+            cursor: pointer;
+            .connect-btn{
+                text-align: center;
+                padding: 0.5rem 0;
+                margin-right: 0.5rem;
+                border-radius: 0.2rem;
+                color: #43E8E1;
+                width: 8rem;
+                border: 2px solid #43E8E1;
+            }
+        }
+       
+    }
+    .active-nav{
+        max-height:15rem ;
+    }
+    @media (max-width:800px){
+       .nav-container{
+           grid-template-columns: 1fr 1fr;
+           .logo{
+               .toggle-nav{
+                   display: block;
+               }
+           }
+           .nav-links{
+               grid-row: 2/3;
+               display: block;
+               li{
+                   padding: 1rem 0.5rem;
+               }
+           }
+           .connect-to-wallet{
+               .connect-btn{
+                   width: 11rem;
+               }
+           }
+       }
+    }
+}
